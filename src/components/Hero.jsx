@@ -17,14 +17,15 @@ const Hero = () => {
   }, []);
   const addTodo = () => {
     let todo = userInput.current.value.trim();
+    if (todo.length === 0) return;
     setList((prevTodos) => [...prevTodos, todo]);
     localStorage.setItem("lastItem", todo);
     userInput.current.value = ""; // clear input
   };
   const removeTodo = (indexToRemove) => {
-    setList((prevTodos) => {
-      prevTodos.filter((_, index) => index !== indexToRemove);
-    });
+    setList((prevTodos) =>
+      prevTodos.filter((_, index) => index !== indexToRemove)
+    );
   };
   return (
     <>
