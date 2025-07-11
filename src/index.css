@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+  @apply bg-[#ffffff] text-zinc-800 h-full w-full duration-300 ease-in-out transition-all;
+}
+html.dark {
+  @apply bg-[#171717] h-full w-full text-white transition-colors duration-300 ease-in-out font-sans antialiased text-base;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.container {
+  @apply max-w-7xl mx-auto px-6;
+}
+.container1 {
+  @apply max-w-7xl px-4 md:px-24;
+}
+.link {
+  @apply cursor-pointer;
+}
+.heading {
+  background: -webkit-linear-gradient(180deg, #808080, #000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.dark .heading {
+  background: -webkit-linear-gradient(180deg, white, #e8e8e8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
