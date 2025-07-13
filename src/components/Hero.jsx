@@ -43,7 +43,7 @@ const Hero = () => {
     if (editText.trim().length === 0) return;
     setList((prevTodos) =>
       prevTodos.map((item, index) => (index === editIndex ? editText : item))
-    );
+    ); // Gives Out A Array!!
     setEditIndex(null);
     setEditPopupOpen(false);
   };
